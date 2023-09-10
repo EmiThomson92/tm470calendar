@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Calendar Application</title>
+    </head>
+    <body>
+        <button id="lastMonth">Last Month</button>
+        <button id="nextMonth">Next Month</button>
+        <div id = "month"></div>
+        <div class = "container">
+
+        <div id="calendar">
+          </div>
+          </div>
+
+          <div id="popup" class="popup">
+            <div class="popup-content">
+                <!-- Add the 'x' icon here -->
+            <span id="closePopup" class="close-button">X</span>
+                <div class="header">
+                    <h2>Positive</h2>
+                    <h2>Negative</h2>
+                </div>
+                <div class="columns">
+                    <div class="column positive" id="positiveColumn" ondrop="drop(event, 'positive')" ondragover="allowDrop(event)">
+                        <!-- Positive column content goes here -->
+                    </div>
+                    <div class="column negative" id="negativeColumn" ondrop="drop(event, 'negative')" ondragover="allowDrop(event)">
+                        <!-- Negative column content goes here -->
+                    </div>
+                </div>
+                
+                
+                <h2>Add custom word</h2>
+                <input type="text" id="customWord" name="fname">
+                <div> 
+                <button id="addPositiveButton">Positive</button>
+                <button id="addNegativeButton">Negative</button>
+                </div>
+                <div class="full-width-list word-selection">
+                    <!-- List content goes here -->
+                    <span class="draggable-word" draggable="true" ondragstart="drag(event)">Work</span>
+                    <span class="draggable-word" draggable="true" ondragstart="drag(event)">Family</span>
+                    <span class="draggable-word" draggable="true" ondragstart="drag(event)">School</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
